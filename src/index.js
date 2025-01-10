@@ -2,7 +2,7 @@ import getNewFeedItems from './feed';
 import {
   getExistingPages,
   addFeedItemToNotion,
-  deleteOldUnreadItemsFromNotion,
+  deleteOldUnreadFeedItemsFromNotion,
 } from './notion';
 import htmlToNotionBlocks from './parser';
 
@@ -30,7 +30,7 @@ async function index() {
     }
   }
 
-  await deleteOldUnreadItemsFromNotion();
+  await deleteOldUnreadFeedItemsFromNotion();
 }
 
 index();
